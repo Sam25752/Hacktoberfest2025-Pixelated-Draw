@@ -1,0 +1,138 @@
+## 🌟 Pixelated-Draw
+<p align="center"> <b>Hurry Up!!</b></p>
+<p align="center">
+  <img src="https://i.countdownmail.com/3nghwl.gif" style="width:401px;" alt="Countdown to November 1st" />
+</p>
+<img width="1878" height="894" alt="image" src="https://github.com/user-attachments/assets/f6359636-b606-4820-ba36-626e1a3cd590" />
+<br>
+<hr>
+
+👋 Welcome to my Portfolio Contribution Repo!  
+This repository is created to showcase collaboration, creativity, and contributions from developers around the world. 🚀  
+
+You can add your own touch by improving, enhancing, or personalizing sections of this portfolio project.  
+
+---
+
+## 📌 Contribution Guidelines  
+
+✅ You can:  
+- Follow me at first.  
+- Edit or improve existing files (HTML, CSS, JS, etc.).  
+- Suggest enhancements in design, layout, or features.  
+- Add new pages, animations, or styling tweaks.  
+
+⚠️ Rules:  
+- Do **not delete** any base code from the repository.  
+- When raising a Pull Request (PR), **attach a screenshot or image** of what you changed – this helps in reviewing faster.  
+- Only meaningful contributions will be approved.  
+
+---
+
+## 🔧 Steps To Contribute  
+
+1. **Fork** this repository using the fork button on the top right.  
+2. **Clone** your forked repo:  
+   ```bash
+   git clone <your-fork-url>
+   ```
+3. **Create a new branch**:  
+   ```bash
+   git checkout -b your-branch-name
+   ```
+4. **Make your changes** (add/edit files).  
+5. **Add and commit**:  
+   ```bash
+   git add -A
+   git commit -m "your meaningful commit message"
+   ```
+6. **Push** to your branch:  
+   ```bash
+   git push origin your-branch-name
+   ```
+7. **Create a Pull Request (PR)** with a **screenshot** of your changes.  
+
+---
+
+## 🌐 Example Contributions  
+
+- Add your profile in `contributors.json` file.
+- Copy the following schema, add your details and paste it in the contributors.json appropriately.
+ ```bash
+    ,
+  {
+    "name": "",
+    "github": "",
+    "role": "Contributor",
+    "avatar": ""
+  }
+   ```
+
+- Improve portfolio sections like **About Me, Projects, Skills, Contact**.  
+- Add new animations or design improvements.  
+- Fix typos or formatting.  
+
+---
+
+## 🏆 Contribution Rules  
+
+- Multiple contributions are welcome 🎉  
+- Every contributor will be acknowledged.  
+- Approval depends on contribution quality.  
+- Follow basic coding ethics (no spammy PRs).  
+
+---
+
+## 📢 Note  
+
+This repository is open for contributions, but only those changes that improve or personalize the portfolio **and follow the rules above** will be merged.  
+
+✨ Let’s build and grow together!  
+
+---
+
+# 🚀 Contributors
+
+Thanks go to these **Wonderful People** 👨🏻‍💻  
+
+<!-- CONTRIBUTORS START -->
+
+<table>
+<tr>
+<td align="center">
+  <a href="https://github.com/yesiamrajeev">
+    <img src="https://avatars.githubusercontent.com/u/125568812?s=400&u=e3c86ca01302bbb26860a239218f676f6cc1604e&v=4" width="100" style="border-radius:50%"/><br/>
+    <sub><b>Rajeev Kumar Behera</b></sub><br/>
+    <p>Maintainer</p>
+  </a>
+</td>
+
+<td align="center">
+  <a href="https://github.com/Maharanasarbani">
+    <img src="https://avatars.githubusercontent.com/u/132124215?v=4" width="100" style="border-radius:50%"/><br/>
+    <sub><b>Sarbani Maharana</b></sub><br/>
+    <p>Contributor</p>
+  </a>
+</td>
+
+<td align="center">
+  <a href="https://github.com/Yajy">
+    <img src="https://avatars.githubusercontent.com/u/101127424?s=400&u=223d18fdddbced0735ef383c130c2e5362aedc92&v=4" width="100" style="border-radius:50%"/><br/>
+    <sub><b>Yajy Goswami</b></sub><br/>
+    <p>Contributor</p>
+  </a>
+</td>
+
+<td align="center">
+  <a href="https://github.com/iamironman-png">
+    <img src="https://avatars.githubusercontent.com/u/209762838?s=400&u=14d6905ab765805f5242d743db8b98551eab5467&v=4" width="100" style="border-radius:50%"/><br/>
+    <sub><b>Git Ironman</b></sub><br/>
+    <p>Contributor</p>
+  </a>
+</td>
+
+<!-- CONTRIBUTORS END -->
+
+---
+
+✨ Want to join? Open a PR to add yourself to `contributors.json`!
