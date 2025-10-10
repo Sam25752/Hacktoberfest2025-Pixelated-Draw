@@ -12,7 +12,7 @@ This repository is created to showcase collaboration, creativity, and contributi
 
 You can add your own touch by improving, enhancing, or personalizing sections of this portfolio project.  
 
----
+
 
 ## 📌 Contribution Guidelines  
 
@@ -27,7 +27,7 @@ You can add your own touch by improving, enhancing, or personalizing sections of
 - When raising a Pull Request (PR), **attach a screenshot or image** of what you changed – this helps in reviewing faster.  
 - Only meaningful contributions will be approved.  
 
----
+
 
 ## 🔧 Steps To Contribute  
 
@@ -52,7 +52,6 @@ You can add your own touch by improving, enhancing, or personalizing sections of
    ```
 7. **Create a Pull Request (PR)** with a **screenshot** of your changes.  
 
----
 
 ## 🌐 Example Contributions  
 
@@ -72,7 +71,7 @@ You can add your own touch by improving, enhancing, or personalizing sections of
 - Add new animations or design improvements.  
 - Fix typos or formatting.  
 
----
+
 
 ## 🏆 Contribution Rules  
 
@@ -81,7 +80,7 @@ You can add your own touch by improving, enhancing, or personalizing sections of
 - Approval depends on contribution quality.  
 - Follow basic coding ethics (no spammy PRs).  
 
----
+
 
 ## 📢 Note  
 
@@ -89,7 +88,7 @@ This repository is open for contributions, but only those changes that improve o
 
 ✨ Let’s build and grow together!  
 
----
+
 
 # 🚀 Contributors
 
@@ -133,6 +132,5 @@ Thanks go to these **Wonderful People** 👨🏻‍💻
 
 <!-- CONTRIBUTORS END -->
 
----
 
 ✨ Want to join? Open a PR to add yourself to `contributors.json`!
