@@ -33,37 +33,37 @@ function clearGrid() {
 
 
 function draw(color='black', rainbow=false) {
-  let isDrawing = false;
+    let isDrawing = false;
 
-  function startDrawing() {
-    isDrawing = true;
-  }
-
-  function stopDrawing() {
-    isDrawing = false;
-  }
-
-  function drawBox(box) {
-    if (isDrawing) {
-        if (rainbow) {
-            color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
-        }
-        box.style.backgroundColor = color;
+    function startDrawing() {
+        isDrawing = true;
     }
-  }
 
-  let boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => {
-    box.addEventListener('mousedown', () => {
-      startDrawing();
-      drawBox(box);
-    });
-    box.addEventListener('mouseover', () => {
-        drawBox(box);
-    });
-  });
+    function stopDrawing() {
+        isDrawing = false;
+    }
 
-  document.addEventListener('mouseup', stopDrawing);
+    function drawBox(box) {
+        if (isDrawing) {
+            if (rainbow) {
+                color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+            }
+            box.style.backgroundColor = color;
+        }
+    }
+
+    let boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        box.addEventListener('mousedown', () => {
+            startDrawing();
+            drawBox(box);
+        });
+        box.addEventListener('mouseover', () => {
+            drawBox(box);
+        });
+    });
+
+    document.addEventListener('mouseup', stopDrawing);
 }
 
 
@@ -88,7 +88,7 @@ function gridAction() {
         removeGrid();
         createGrid(boxSlider.value);
         const colorPicker = document.querySelector("#color-picker");
-        draw(colorPicker.value); 
+        draw(colorPicker.value);
         if (eraseButton.style.opacity == 1) {
             draw('white');
         }
@@ -115,7 +115,7 @@ function gridAction() {
         eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         rainbowButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         const colorPicker = document.querySelector("#color-picker");
-        draw(colorPicker.value); 
+        draw(colorPicker.value);
     });
 
     const gridlinesToggle = document.getElementById('gridlines-toggle');
@@ -151,6 +151,46 @@ function updateFirst(event) {
 function updateAll(event) {
     draw(event.target.value);
 }
+
+function downloadImage() {
+    const gridlinesToggle = document.getElementById('gridlines-toggle');
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 500;
+    canvas.height = 500;
+
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const boxes = document.querySelectorAll('.box');
+    const size = Math.sqrt(boxes.length);
+    const boxSize = 500 / size;
+
+    boxes.forEach((box, index) => {
+        const row = Math.floor(index / size);
+        const col = index % size;
+        const x = col * boxSize;
+        const y = row * boxSize;
+
+        ctx.fillStyle = box.style.backgroundColor || 'white';
+        ctx.fillRect(x, y, boxSize, boxSize);
+
+        if (gridlinesToggle.checked) {
+            ctx.strokeStyle = '#D3D3D3';  // Light gray color
+            ctx.lineWidth = 1;
+            ctx.strokeRect(x, y, boxSize, boxSize);
+        }
+    });
+
+    const dataURL = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.download = 'pixelated-drawing.png';
+    link.href = dataURL;
+    link.click();
+}
+
+document.querySelector('.download').addEventListener('click', downloadImage);
 
 gridAction();
 
