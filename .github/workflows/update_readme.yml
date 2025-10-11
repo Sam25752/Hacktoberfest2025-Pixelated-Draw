@@ -1,4 +1,4 @@
-name: Update README with Contributors
+name: 🔄 Update README
 
 on:
   push:
@@ -16,28 +16,26 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+    steps:
+      - name: 🛠️ Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
-        run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Run Python update script
+      - name: 🚀 Run update script
         run: python update_readme.py
 
-      - name: Commit and push changes (if any)
+      - name: 💾 Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "🔄 Auto-update README with contributors"
-          git push
+          git diff --quiet && echo "✅ No changes to commit" || (git commit -m "🔄 Update README with contributors" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
