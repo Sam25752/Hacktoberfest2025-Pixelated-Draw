@@ -88,7 +88,6 @@ This repository is open for contributions, but only those changes that improve o
 
 ✨ Let’s build and grow together!  
 
-
 ---
 # 🚀 Contributors
 
@@ -128,7 +127,8 @@ Thanks go to these **Wonderful People** 👨🏻‍💻
     <p>Contributor</p>
   </a>
 </td>
-
+</tr>
+</table>
 <!-- CONTRIBUTORS END -->
 ---
 
