@@ -89,7 +89,7 @@ This repository is open for contributions, but only those changes that improve o
 ✨ Let’s build and grow together!  
 
 
-
+---
 # 🚀 Contributors
 
 Thanks go to these **Wonderful People** 👨🏻‍💻  
@@ -130,6 +130,6 @@ Thanks go to these **Wonderful People** 👨🏻‍💻
 </td>
 
 <!-- CONTRIBUTORS END -->
-
+---
 
 ✨ Want to join? Open a PR to add yourself to `contributors.json`!
