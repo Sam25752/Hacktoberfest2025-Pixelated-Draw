@@ -94,6 +94,7 @@ This repository is open for contributions, but only those changes that improve o
 Thanks go to these **Wonderful People** 👨🏻‍💻  
 
 <!-- CONTRIBUTORS START -->
+
 <table>
 <tr>
 <td align="center">
@@ -127,8 +128,17 @@ Thanks go to these **Wonderful People** 👨🏻‍💻
     <p>Contributor</p>
   </a>
 </td>
+
+<td align="center">
+  <a href="https://github.com/k0msenapati">
+    <img src="https://avatars.githubusercontent.com/u/92045934?v=4" width="100" style="border-radius:50%"/><br/>
+    <sub><b>K Om Senapati</b></sub><br/>
+    <p>Contributor</p>
+  </a>
+</td>
 </tr>
 </table>
+
 <!-- CONTRIBUTORS END -->
 
 ✨ Want to join? Open a PR to add yourself to `contributors.json`!
