@@ -194,56 +194,56 @@ function clearGrid() {
 
 
 function draw(color='black', rainbow=false) {
-  let isDrawing = false;
-  let hasDrawn = false;
+    let isDrawing = false;
+    let hasDrawn = false;
 
-  function startDrawing() {
-    isDrawing = true;
-    hasDrawn = false;
-  }
-
-  function stopDrawing() {
-    if (isDrawing && hasDrawn) {
-        saveState();
+    function startDrawing() {
+        isDrawing = true;
+        hasDrawn = false;
     }
-    isDrawing = false;
-    hasDrawn = false;
-  }
 
-  function drawBox(box) {
-    if (fillMode) {
-        const targetColor = box.style.backgroundColor || 'white';
-        const fillColor = rainbow ? 
-            `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})` : 
-            color;
-        saveState();
-        floodFill(box, targetColor, fillColor);
-        fillMode = false;
-        document.querySelector('.fill-bucket').style.opacity = '0.8';
-        return;
-    }
-    
-    if (isDrawing && !box.classList.contains('outside-outline')) {
-        hasDrawn = true;
-        if (rainbow) {
-            color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+    function stopDrawing() {
+        if (isDrawing && hasDrawn) {
+            saveState();
         }
-        box.style.backgroundColor = color;
+        isDrawing = false;
+        hasDrawn = false;
     }
-  }
 
-  let boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => {
-    box.addEventListener('mousedown', () => {
-      startDrawing();
-      drawBox(box);
-    });
-    box.addEventListener('mouseover', () => {
-        drawBox(box);
-    });
-  });
+    function drawBox(box) {
+        if (fillMode) {
+            const targetColor = box.style.backgroundColor || 'white';
+            const fillColor = rainbow ? 
+                `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})` : 
+                color;
+            saveState();
+            floodFill(box, targetColor, fillColor);
+            fillMode = false;
+            document.querySelector('.fill-bucket').style.opacity = '0.8';
+            return;
+        }
+        
+        if (isDrawing && !box.classList.contains('outside-outline')) {
+            hasDrawn = true;
+            if (rainbow) {
+                color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+            }
+            box.style.backgroundColor = color;
+        }
+    }
 
-  document.addEventListener('mouseup', stopDrawing);
+    let boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        box.addEventListener('mousedown', () => {
+            startDrawing();
+            drawBox(box);
+        });
+        box.addEventListener('mouseover', () => {
+            drawBox(box);
+        });
+    });
+
+    document.addEventListener('mouseup', stopDrawing);
 }
 
 
@@ -268,7 +268,7 @@ function gridAction() {
         removeGrid();
         createGrid(boxSlider.value);
         const colorPicker = document.querySelector("#color-picker");
-        draw(colorPicker.value); 
+        draw(colorPicker.value);
         if (eraseButton.style.opacity == 1) {
             draw('white');
         }
@@ -295,7 +295,7 @@ function gridAction() {
         eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         rainbowButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         const colorPicker = document.querySelector("#color-picker");
-        draw(colorPicker.value); 
+        draw(colorPicker.value);
     });
 
     const gridlinesToggle = document.getElementById('gridlines-toggle');
@@ -372,6 +372,8 @@ function updateFirst(event) {
 function updateAll(event) {
     draw(event.target.value);
 }
+
+
 
 gridAction();
 
