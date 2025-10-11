@@ -95,7 +95,6 @@ This repository is open for contributions, but only those changes that improve o
 Thanks go to these **Wonderful People** 👨🏻‍💻  
 
 <!-- CONTRIBUTORS START -->
-
 <table>
 <tr>
 <td align="center">
