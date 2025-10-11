@@ -130,6 +130,5 @@ Thanks go to these **Wonderful People** 👨🏻‍💻
 </tr>
 </table>
 <!-- CONTRIBUTORS END -->
----
 
 ✨ Want to join? Open a PR to add yourself to `contributors.json`!
