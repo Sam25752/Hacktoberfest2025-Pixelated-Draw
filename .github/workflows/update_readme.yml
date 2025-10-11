@@ -1,4 +1,4 @@
-name: 🔄 Update README
+name: Update README
 
 on:
   push:
@@ -16,26 +16,26 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛠️ Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🐍 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      - name: 🚀 Run update script
+      - name: Run update script
         run: python update_readme.py
 
-      - name: 💾 Commit and push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --quiet && echo "✅ No changes to commit" || (git commit -m "🔄 Update README with contributors" && git push)
+          git commit -m "🔄 Update README with contributors" || echo "No changes to commit"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
